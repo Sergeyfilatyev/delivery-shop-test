@@ -1,7 +1,11 @@
 import Shop from "../components/Shop";
 
 const ShopPage = () => {
-  <Shop />;
+  return (
+    <>
+      <Shop />
+    </>
+  );
 };
 
 export default ShopPage;

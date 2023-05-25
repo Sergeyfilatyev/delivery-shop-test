@@ -1,8 +1,8 @@
 import React from "react";
 
-const Menu = ({ menuItems, addToCart }) => {
-  const handleSelectMenu = (menuItem) => {
-    addToCart(menuItem);
+const Menu = ({ menuItems }) => {
+  const addToCart = (menuItem) => {
+    console.log(menuItem);
   };
 
   return (
@@ -13,9 +13,7 @@ const Menu = ({ menuItems, addToCart }) => {
           <li key={menuItem.id}>
             <h3>{menuItem.name}</h3>
             <p>Price: ${menuItem.price}</p>
-            <button onClick={() => handleSelectMenu(menuItem)}>
-              Add to Cart
-            </button>
+            <button onClick={() => addToCart(menuItem)}>Add to Cart</button>
           </li>
         ))}
       </ul>

@@ -45,15 +45,6 @@ const Shop = () => {
     setSelectedMenu(null);
   };
 
-  const handleSelectMenu = (menu) => {
-    setSelectedMenu(menu);
-  };
-  const [cartItems, setCartItems] = useState([]);
-
-  const addToCart = (menuItem) => {
-    setCartItems((prevCartItems) => [...prevCartItems, menuItem]);
-  };
-
   return (
     <div>
       <div>
@@ -71,7 +62,7 @@ const Shop = () => {
       </div>
       <div>
         {selectedShop && !selectedMenu && (
-          <Menu menuItems={selectedShop.menu} addToCart={() => addToCart()} />
+          <Menu menuItems={selectedShop.menu} />
         )}
       </div>
     </div>

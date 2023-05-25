@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Shop from "./Shop";
+// import Shop from "./Shop";
 import Cart from "./Cart";
 import { Layout } from "./Layout";
+import ShopPage from "../Pages/ShopsPage";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
-  };
+  // const addToCart = (item) => {
+  //   setCartItems([...cartItems, item]);
+  // };
   const removeFromCart = (item) => {
     const updatedCartItems = cartItems.filter(
       (cartItem) => cartItem.id !== item.id
@@ -18,7 +19,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Shop addToCart={addToCart} />} />
+        <Route index element={<ShopPage />} />
         <Route
           path="/cart"
           element={
